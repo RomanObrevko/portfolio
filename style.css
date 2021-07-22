@@ -6,26 +6,39 @@ nav {
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
-    line-height: 1,5;
-    /*justify-content: center;*/
+    line-height: 1,5;    
 }
+
 nav h1 {
-    background-color: chartreuse;
-    border: solid 2px gold;
+    
 }
+
 nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 nav ul li {
     flex: 1 auto;
-    background-color: burlywood;
     list-style-type: none;
-    border: solid 2px gold;
+    border: solid 1px white;
     width: auto;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
     font-size: 18px;
     line-height: 1.5;
-}
+} 
+@media screen and (max-width: 480px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*align-items: center;*/
+        line-height: 1,5;    
+    }
+    nav ul {
+        flex-direction: column;
+        
+    }
+    nav ul li {
+        flex: 100%;
+        }
+  }
