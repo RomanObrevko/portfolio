@@ -5,27 +5,24 @@ html {
 nav {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    gap: 20px;
     align-items: center;
-    line-height: 1,5;    
+    line-height: 1.5;
+}
+nav div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-nav h1 {
-    
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-nav ul li {
+nav div button {
     flex: 1 auto;
     list-style-type: none;
+    color: white;
+    background-color: black;
     border: solid 1px white;
     width: auto;
     margin: 5px;
     text-align: center;
-    font-size: 18px;
-    line-height: 1.5;
 } 
 @media screen and (max-width: 480px) {
     nav {
@@ -34,11 +31,9 @@ nav ul li {
         /*align-items: center;*/
         line-height: 1,5;    
     }
-    nav ul {
-        flex-direction: column;
-        
+    nav div {
+        display: grid;
+        grid-template-columns: 1fr;
     }
-    nav ul li {
-        flex: 100%;
-        }
+    
   }
